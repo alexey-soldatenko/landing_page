@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="{% static 'js/main.js' %} "></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3&callback=initMap" async defer></script>
+</head>
+<script type="text/javascript" src="{% static 'js/ajax_request.js' %} "></script>
+<link rel="stylesheet" type="text/css" href=" {% static 'css/main.css' %}">
+<link rel="stylesheet" type="text/css" href=" {% static 'css/mobile.css' %}">
+<body>
+
+<div class="header">
+  <div class="section_inner">
+    <div class="slogan">
+      <div style="margin-top: 5px; font-size: 14px;">Оптовые поставки мандарин по всей Украине.</div>
+      <div style="margin-top: 5px; font-size: 14px;">Доставка осуществляется от 20 тонн.</div>
+    </div>
+    <div class="logo_img">
+      <div style="width: 200px; height: 50px;  margin: auto;"><i>МандаринОпт</i></div>
+      
+    </div>
+    <div class="phone">
+      <div class="phone_number">063 456 77 18</div>
+      <div class="phone_button_top">
+        <button class="phone_button" onclick="show_form('wrapper2')">Заказать звонок</button>
+      </div>
+    </div>
+    <div class="clear" style="clear: both;"></div>
+  </div>
+</div>
+
+<div class="section_description">
+  <div class="section_inner">
+  <div class="box_description">
+    <div style="font-size: 24px; line-height: 150%;">
+      Мандарины оптом от производителя по низким ценам!
+    </div>
+    <div style="font-size: 18px; margin-top: 40px; line-height: 150%;">
+      Работаем по всей Украине. Доставка от 20 тонн. Отгружаем оперативно, поможем найти транспорт до вашего склада. При заказе от 150 тонн транспортировка - БЕСПЛАТНО.
+    </div>
+    </div>
+    <div class="form">
+
+      <div style="font-size: 18px;">Оставьте заявку на сайте</div>
+      <div>
+        <form name="email_form" onsubmit="ajax_request_form('email'); return false">
+        <div class="form_title">Введите имя</div>
+          <div><input style="width: 100%" type="text" name="name" required></div>
+        <div class="form_title">Введите email</div>
+        <div><input style="width: 100%" type="email" name="email" required></div>
+        <div class="form_title">Введите ваш номер телефона</div>
+        <div class="form_sub_title">Наш менеджер вам перезвонит</div>
+        <div><input style="width: 100%" type="text" name="phone" required></div>
+        <div style="margin-top: 20px;">
+         <input type="submit" value="Записаться сейчас">
+        </div>
+        </form>
+      </div>
+      <div style="margin-top: 10px; font-size: 12px; color: black; line-height: 26px;">Мы не передаем Вашу персональную информацию третьим лицам</div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="clear_box"></div>
+
+<div class="our_services">
+  <div class="section_inner">
+  <div class="clear_box"></div>
+    <div style="text-align: center; padding: 5px; font-size: 24px;">Услуги, которые мы предоставляем</div>
+    <div style="text-align: center; padding: 5px;">Выберите услугу, подходящую под решение ваших задач</div>
+    <div class="clear_box"></div>
+
+    <div class="service_col">
+    <div class="service_img">
+      <img src=" {% static 'img/garant.png' %} ">
+    </div>
+       <div class="service_sub_title">Гарантия качества</div>
+      <div class="service_text">На нашем производстве осуществляется строгий контроль качества продукции. Мы также располагаем большими объемами мандарин. Вам не придется постоянно искать новых поставщиков!</div>  
+    </div>
+    <div class="service_col">
+    <div class="service_img">
+      <img src="{% static 'img/important.png' %}">
+    </div>
+       <div class="service_sub_title">Гарантия лучшей цены!</div>
+      <div class="service_text">Мы предлагаем свою продукцию круглый год. Свежий урожай каждого года! Работаем непосредственно с производителем.</div>
+    </div>
+    <div class="service_col">
+    <div class="service_img">
+      <img src="{% static 'img/delivery.png' %}">
+    </div>
+      <div class="service_sub_title"> Доставка в минимальный срок.</div>
+      <div class="service_text">Мы заключаем официальный договор с каждым клиентом. Мы заинтересованы в долгосрочном сотрудничестве, поэтому строго соблюдаем все условия и сроки поставки продукции. </div>
+    </div>
+  </div>
+</div>
+
+  <div class="clear_box"></div>
+  <div class="clear_box"></div>
+
+<div class="our_production">
+  <div class="section_inner">
+    <div style="text-align: center; font-size: 24px;">Характеристики продукции</div>
+
+    <div class="product_row">
+      <div class="col1">
+        <div class="product_img">
+          <img src="{% static 'img/abhazskie.jpg' %}">
+        </div>
+        <div class="product_description">
+        <div style="max-height: 100px; overflow: hidden">
+          Абхазские мандарины. Плоды средних размеров, округлой формы, имеют матовую, желтую кожуру. Мякоть сочная, сладкая, с легкой кислинкой.
+        </div>
+          
+          <div class="cost">10грн</div>
+          <div class="product_button">
+            <button  onclick="show_form('wrapper')">Заказать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col2">
+        <div class="product_img">
+          <img src="{% static 'img/imperator.jpg' %}">
+        </div>
+        <div class="product_description">
+          «Император». Плоды небольших или средних размеров. Имеют толстую, пухлую кожуру, легко отделяющуюся от мякоти. Мякоть хорошего вкуса.
+          <div class="cost">12грн</div>
+          <div class="product_button">
+            <button  onclick="show_form('wrapper')">Заказать</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+ <div class="clear_box"></div>
+
+<div class="product_row">
+      <div class="col1">
+        <div class="product_img">
+          <img src="{% static 'img/turky.jpg' %}">
+        </div>
+        <div class="product_description">
+          Турецкие имеют тонкую, желтую или светло-оранжевую кожуру, тяжело отделяющуюся от мякоти. На вкус кисло-сладкие, несколько пресные.
+          <div class="cost">10грн</div>
+          <div class="product_button">
+            <button  onclick="show_form('wrapper')">Заказать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col2">
+        <div class="product_img">
+          <img src="{% static 'img/china.jpg' %}">
+        </div>
+        <div class="product_description">
+          Китайские мандарины. Плоды средних размеров. Имеют кожуру желтого оттенка, кисло-сладкие, с приятным вкусом.
+          <div class="cost">12грн</div>
+          <div class="product_button">
+            <button  onclick="show_form('wrapper')">Заказать</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+ <div class="clear_box"></div>
+
+<div style="text-align: center; margin-top: 20px;">Оформите заявку и получите полный прайс-лист нашей продукции</div>
+ <div class="clear_box"></div>
+
+<div class="big_button_box">
+  <button class="big_button" onclick="show_form('wrapper')">Оставить заявку</button>
+</div>
+
+  </div>
+</div>
+
+<div class="about">
+  <div class="section_inner">
+    <div style="text-align: center; margin-top: 20px; font-size: 24px;">Подробнее о МандаринОпт</div>
+    <div style="text-align: center;">__________</div>
+    <div style="margin-top: 20px; font-size: 12px; line-height: 20px;">
+    <b>МандаринОпт</b> является крупнейшим поставщиком мандарин в Украине. Компания была организована весной 2010 года. Тогда уже в далеком 2010 году мы начинали с одного склада, но вот уже по прошествии 7 лет, благодаря доверию своих покупателей мы расширили границы поставок и теперь охватываем всю страну. Мы предоставляем продукцию лучшего качества по скромной цене. Своим клиентам мы также предоставляем услуги доставки в любую точку страны, в любое время дня и ночи. Каждый клиент дорог для нас. Оставьте свою заявку на сайте и наш менеджер свяжется с вами уже через 5 минут. Мы дорожим временем наших клиентов. 
+    </div>
+
+    <div class="about_big_photo">
+      <img src="{% static 'img/storage1.jpg' %}">
+    </div>
+    <div class="about_small_photo">
+        <img src="{% static 'img/storage2.jpg' %}">
+        <img src="{% static 'img/storage3.jpg' %}">
+    
+    </div>
+
+
+  </div>
+</div>
+
+<div>
+  <div class="section_inner">
+  <div style="margin: 20px auto; text-align: center; font-size: 24px;">Вы можете найти нас здесь</div>
+    <div style="margin: 20px auto; text-align: center;" id="map"></div>
+  </div>
+</div>
+
+
+
+
+
+<div>
+  <div class="section_inner">
+    <div style="text-align: center; margin-bottom: 20px;">&copy; Alexey Soldatenko 2017</div>
+  </div>
+</div>
+
+
+<div id="wrapper">
+  <div class="wrapper_form">
+  <div class="close_button"><img onclick="close_form('wrapper')" style="width: 20px;" src="{% static 'img/close.png' %}"></div>
+         <div style="font-size: 18px;">Оставьте заявку на сайте</div>
+      <div>
+        <form name="email_form" onsubmit="ajax_request_form('email'); return false">
+        <div class="form_title">Введите имя</div>
+          <div><input style="width: 100%" type="text" name="name" required></div>
+        <div class="form_title">Введите email</div>
+        <div><input style="width: 100%" type="email" name="email" required></div>
+        <div class="form_title">Введите Ваш номер телефона</div>
+        <div class="form_sub_title">Наш менеджер Вам перезвонит</div>
+        <div><input style="width: 100%" type="text" name="phone" required></div>
+        <div style="margin-top: 20px;">
+         <input type="submit" value="Записаться сейчас">
+        </div>
+        </form>
+      </div>
+      <div style="margin-top: 10px; font-size: 12px; color: black; line-height: 26px;">Мы не передаем Вашу персональную информацию третьим лицам</div>
+
+  </div>
+</div>
+
+<div id="wrapper2">
+  <div class="wrapper_form">
+  <div class="close_button"><img onclick="close_form('wrapper2')" style="width: 20px;" src="{% static 'img/close.png' %}"></div>
+
+         <div style="font-size: 18px;">Оставьте заявку на сайте</div>
+      <div>
+        <form name="phone_form" onsubmit="ajax_request_form('phone'); return false">
+        <div class="form_title">Введите имя</div>
+        <div><input style="width: 100%" type="text" name="name" required></div>
+        <div class="form_title">Введите номер телефона</div>
+        <div><input style="width: 100%" type="text" name="phone" required></div>
+        <div style="margin-top: 20px;">
+         <input type="submit" value="Перезвоните мне">
+        </div>
+        </form>
+      </div>
+      <div style="margin-top: 10px; font-size: 11px; color: black; line-height: 15px;">Мы не передаем Вашу персональную информацию третьим лицам</div>
+       
+  </div>
+</div>
+  
+
+  <div id="message_block">
+  <div>
+     <img style="width: 60px; float: left;" src="{% static 'img/admin.png' %}">
+  <span id="message_text"></span>
+  </div>
+ </div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,42 @@
+<style type="text/css">
+	table{
+		border-collapse: collapse;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	table tr td, table tr th{
+		border: 1px solid black;
+		padding: 5px;
+	}
+</style>
+
+
+<h1 style="text-align: center;">Новый запрос от клиента.</h1>
+<div style="margin: auto;">
+<table style="border: 1px solid black;">
+	<tr>
+		<th>
+			Данные клиента
+		</th>
+		<th>
+			Значения
+		</th>
+	</tr>
+	<tr>
+		<td>Имя</td>
+		<td>{{name}}</td>
+	</tr>
+	<tr>
+		<td>Телефон</td>
+		<td>{{phone}}</td>
+	</tr>
+	<tr>
+		<td>Эл. почта</td>
+		<td>{{email}}</td>
+	</tr>
+	<tr>
+		<td>Дата</td>
+		<td>{{message_date|date:"d/m/Y H:i"}}</td>
+	</tr>
+</table>
+</div>
